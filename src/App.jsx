@@ -63,7 +63,7 @@ function App() {
       {/* Features */}
       <section id="Features" className="py-24 px-4 bg-[#f4fef8]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0EA672] mb-12 text-left">Features</h2>
+          <h2 className="text-3xl font-bold text-[#fdac41] mb-12 text-left">Features</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: <FaBus />, title: "Bus Arrivals", text: "See live bus timings from nearby stops." },
@@ -87,7 +87,7 @@ function App() {
       {/* Screenshots */}
       <section className="bg-[#f4fef8] py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-bold mb-10 text-[#0EA672] text-left">Screenshots</h3>
+          <h3 className="text-3xl font-bold mb-10 text-[#fdac41] text-left">Screenshots</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {[screenshot1, screenshot2, screenshot3].map((src, i) => (
               <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden p-4">
@@ -101,7 +101,7 @@ function App() {
       {/* About */}
       <section id="About" className="py-20 bg-[#f9fdfb] px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0EA672] mb-6">About the App</h2>
+          <h2 className="text-3xl font-bold text-[#fdac41] mb-6">About the App</h2>
           <p className="text-lg mb-8 max-w-2xl">
             GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
           </p>
@@ -115,7 +115,7 @@ function App() {
       {/* Feedback Form */}
       <section id="Feedback" className="py-20 bg-[#f4fef8] px-4">
         <div className="max-w-2xl mx-auto bg-[#f9fdfb] p-8 rounded-xl shadow-md">
-          <h2 className="text-3xl font-bold text-[#0EA672] mb-6">We’d love your feedback!</h2>
+          <h2 className="text-3xl font-bold text-[#fdac41] mb-6">We’d love your feedback!</h2>
           <form
             action="https://formspree.io/f/xgvyarvn"
             method="POST"
