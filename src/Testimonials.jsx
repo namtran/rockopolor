@@ -38,6 +38,11 @@ const Testimonials = () => {
       behavior: 'smooth',
     });
   };
+  const gradientClasses = [
+    "bg-gradient-to-br from-[#44CB7D] via-[#5EE390] to-[#3CC172]",
+    "bg-gradient-to-br from-[#44CB7D] via-[#70DB97] to-[#2FAC6B]",
+    "bg-gradient-to-br from-[#44CB7D] via-[#5DDB89] to-[#38B16A]",
+  ];
 
   return (
     <section className="bg-gray-100 py-20 px-4 sm:px-6">
@@ -55,7 +60,7 @@ const Testimonials = () => {
                 className="w-[90%] sm:w-2/3 md:w-1/2 lg:w-1/3 shrink-0 snap-start px-3 my-4"
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="bg-[#44CB7D] text-white p-6 md:p-8 rounded-2xl shadow-md h-full space-y-4">
+                <div className={`${gradientClasses[i % gradientClasses.length]} text-white p-6 md:p-8 rounded-2xl shadow-md h-full space-y-4`}>
                 <p className="italic">"{text}"</p>
                 <p className="text-sm font-semibold">{name}</p>
               </div>
