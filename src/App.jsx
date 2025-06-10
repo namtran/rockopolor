@@ -132,9 +132,10 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-[#f5f5f5] text-sm text-gray-600">
+      <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white">
         &copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.
       </footer>
+
     </div>
   );
 }
