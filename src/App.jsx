@@ -9,6 +9,7 @@ import screenshot1 from "./assets/screenshot1.jpg";
 import screenshot2 from "./assets/screenshot2.jpg";
 import screenshot3 from "./assets/screenshot3.jpg";
 import logo from "./assets/Logo.png";
+import favIcon from "./assets/favicon.png";
 import Testimonials from "./Testimonials";
 
 function App() {
@@ -25,8 +26,14 @@ function App() {
       {/* Header */}
       <header className="bg-white/90 backdrop-blur-md shadow sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-lg sm:text-xl font-semibold text-[#0EA672]">GoBus SG</h1>
-          <nav className="space-x-6">
+        <a href="/" className="block">
+          <img
+            src={favIcon}
+            alt="GoBusSG"
+            className="h-6 w-6 w-auto"
+          />
+        </a>
+          <nav className="space-x-4">
             {["Home", "Features", "About", "Feedback"].map((section) => (
               <Link
                 key={section}
@@ -51,7 +58,7 @@ function App() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-4">Get around Singapore smarter 🚍🚇🚆</h2>
+          <h2 className="text-4xl font-bold mb-4">Get around Singapore smarter 🚍🚇🚆 with GoBus SG</h2>
           <p className="mb-8 text-lg">Real-time bus, MRT, and LRT tracking at your fingertips.</p>
           <div className="flex justify-center items-center space-x-4">
             <img src={appleBadge} alt="Download on the App Store" className="w-[120px] object-contain" />
