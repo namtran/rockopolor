@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rockopolor/static/css/main.ed8afa63.css",
-    "main.js": "/rockopolor/static/js/main.d93d4053.js",
+    "main.js": "/rockopolor/static/js/main.f492684d.js",
     "static/js/453.32088f1f.chunk.js": "/rockopolor/static/js/453.32088f1f.chunk.js",
     "static/media/aboutApp.png": "/rockopolor/static/media/aboutApp.3c9f1e5e6326db350605.png",
     "static/media/screenshot2.jpg": "/rockopolor/static/media/screenshot2.2531c33f455e5768a674.jpg",
@@ -10,11 +10,11 @@
     "static/media/google-play-badge.png": "/rockopolor/static/media/google-play-badge.1194e014998c301db97f.png",
     "index.html": "/rockopolor/index.html",
     "main.ed8afa63.css.map": "/rockopolor/static/css/main.ed8afa63.css.map",
-    "main.d93d4053.js.map": "/rockopolor/static/js/main.d93d4053.js.map",
+    "main.f492684d.js.map": "/rockopolor/static/js/main.f492684d.js.map",
     "453.32088f1f.chunk.js.map": "/rockopolor/static/js/453.32088f1f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ed8afa63.css",
-    "static/js/main.d93d4053.js"
+    "static/js/main.f492684d.js"
   ]
 }
