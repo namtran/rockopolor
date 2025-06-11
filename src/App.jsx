@@ -25,7 +25,7 @@ function App() {
       {/* Header */}
       <header className="bg-white/90 backdrop-blur-md shadow sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-[#0EA672]">GoBus SG</h1>
+          <h1 className="text-lg sm:text-xl font-semibold text-[#0EA672]">GoBus SG</h1>
           <nav className="space-x-6">
             {["Home", "Features", "About", "Feedback"].map((section) => (
               <Link
