@@ -10,6 +10,7 @@ import screenshot2 from "./assets/screenshot2.jpg";
 import screenshot3 from "./assets/screenshot3.jpg";
 import logo from "./assets/Logo.png";
 import favIcon from "./assets/favicon.png";
+import aboutApp from "./assets/aboutApp.png";
 import Testimonials from "./Testimonials";
 
 function App() {
@@ -114,16 +115,16 @@ function App() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="About" className="py-20 bg-[#f9fdfb] px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#fdac41] mb-6">About the App</h2>
-          <p className="text-lg mb-8 max-w-2xl">
-            GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
-          </p>
-          <img src={logo} alt="App Logo" className="mx-auto max-w-sm rounded-lg shadow" />
-        </div>
-      </section>
+{/* About */}
+<section id="About" className="py-20 bg-[#f9fdfb] px-4">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl font-bold text-[#fdac41] mb-6">About the App</h2>
+    <p className="text-lg mb-8 max-w-2xl">
+      GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
+    </p>
+    <img src={aboutApp} alt="GobusSG Preview" className="mx-auto max-w-sm rounded-lg shadow" />
+  </div>
+</section>
 
       {/* Testimonials */}
       <Testimonials />
