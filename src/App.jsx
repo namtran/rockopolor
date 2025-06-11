@@ -8,7 +8,6 @@ import googleBadge from "./assets/google-play-badge.png";
 import screenshot1 from "./assets/screenshot1.jpg";
 import screenshot2 from "./assets/screenshot2.jpg";
 import screenshot3 from "./assets/screenshot3.jpg";
-import logo from "./assets/Logo.png";
 import favIcon from "./assets/favicon.png";
 import aboutApp from "./assets/aboutApp.png";
 import Testimonials from "./Testimonials";
