@@ -115,7 +115,7 @@ function App() {
       </section>
 
 {/* About */}
-<section id="About" className="py-20 bg-[#f9fdfb] px-4">
+<section id="About" className="py-20 bg-[#f4fef8] px-4">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-3xl font-bold text-[#fdac41] mb-6">About the App</h2>
     <p className="text-lg mb-8 max-w-2xl">
