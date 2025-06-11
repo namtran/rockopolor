@@ -26,13 +26,19 @@ function App() {
       {/* Header */}
       <header className="bg-white/90 backdrop-blur-md shadow sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="block">
-          <img
-            src={favIcon}
-            alt="GoBusSG"
-            className="h-6 w-6 w-auto"
-          />
-        </a>
+        <a href="/" className="block flex items-center space-x-2">
+  {/* Logo for mobile */}
+  <img
+    src={favIcon}
+    alt="GoBusSG"
+    className="h-6 w-6 sm:hidden"
+  />
+
+  {/* Text for desktop */}
+  <span className="hidden sm:inline text-xl font-bold text-[#0EA672]">
+    GoBus SG
+  </span>
+</a>
           <nav className="space-x-4">
             {["Home", "Features", "About", "Feedback"].map((section) => (
               <Link
@@ -58,7 +64,10 @@ function App() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-4">Get around Singapore smarter 🚍🚇🚆 with GoBus SG</h2>
+<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+  Get around Singapore smarter 🚍🚇🚆<br className="hidden sm:block" /> with GoBus SG
+</h2>
+
           <p className="mb-8 text-lg">Real-time bus, MRT, and LRT tracking at your fingertips.</p>
           <div className="flex justify-center items-center space-x-4">
             <img src={appleBadge} alt="Download on the App Store" className="w-[120px] object-contain" />
