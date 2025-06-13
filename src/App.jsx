@@ -115,13 +115,21 @@ function App() {
       </section>
 
 {/* About */}
-<section id="About" className="py-20 bg-[#f4fef8] px-4">
+<section id="About" className="py-20 bg-[#f4fef8] px-4 overflow-x-hidden">
   <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold text-[#fdac41] mb-6">About the App</h2>
+    <h2 className="text-3xl font-bold text-[#fdac41] mb-6">
+      About the App
+    </h2>
     <p className="text-lg mb-8 max-w-2xl">
       GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
     </p>
-    <img src={aboutApp} alt="GobusSG Preview" className="mx-auto max-w-sm rounded-lg shadow" />
+    <div className="flex justify-center">
+      <img
+        src={aboutApp}
+        alt="GobusSG Preview"
+        className="w-full max-w-xs sm:max-w-sm rounded-lg shadow"
+      />
+    </div>
   </div>
 </section>
 
