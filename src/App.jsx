@@ -34,9 +34,8 @@ function App() {
 
           {/* Bottom trapezoid (light orange) */}
           <div
-            className="absolute left-0 text-transparent"
+            className="absolute left-0 text-transparent w-[100px] sm:w-[400px]"
             style={{
-              width: '400px',
               height: '100%',
               backgroundColor: '#ffe0b3',
               clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
@@ -46,9 +45,8 @@ function App() {
 
           {/* Middle trapezoid (white) */}
           <div
-            className="absolute left-0 text-transparent"
+            className="absolute left-0 text-transparent  w-[95px] sm:w-[395px]"
             style={{
-              width: '395px',
               height: '100%',
               backgroundColor: '#ffffff',
               clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
@@ -58,9 +56,8 @@ function App() {
 
           {/* Top trapezoid (orange) */}
           <div
-            className="absolute left-0 text-white text-lg font-bold flex items-center justify-center"
+            className="absolute left-0 text-white text-lg font-bold flex items-center justify-center w-[90px] sm:w-[390px]"
             style={{
-              width: '390px',
               height: '100%',
               backgroundColor: '#FDAC41',
               clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
