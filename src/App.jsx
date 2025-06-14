@@ -34,7 +34,7 @@ function App() {
 
           {/* Bottom trapezoid (light orange) */}
           <div
-            className="absolute left-0 text-transparent w-[150px] sm:w-[400px]"
+            className="absolute left-0 text-transparent w-[100px] sm:w-[400px]"
             style={{
               height: '100%',
               backgroundColor: '#ffe0b3',
@@ -45,7 +45,7 @@ function App() {
 
           {/* Middle trapezoid (white) */}
           <div
-            className="absolute left-0 text-transparent  w-[145px] sm:w-[395px]"
+            className="absolute left-0 text-transparent  w-[95px] sm:w-[395px]"
             style={{
               height: '100%',
               backgroundColor: '#ffffff',
@@ -56,7 +56,7 @@ function App() {
 
           {/* Top trapezoid (orange) */}
           <div
-            className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[140px] sm:w-[390px]"
+            className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[90px] sm:w-[390px]"
             style={{
               height: '100%',
               backgroundColor: '#FDAC41',
@@ -67,10 +67,11 @@ function App() {
             }}
           >
               {/* Logo image (always visible) */}
-              <img src={headerLogo} alt="GoBusSG" className="w-6 h-6 hidden sm:block" />
+              <img src={headerLogo} alt="GoBusSG" className="w-6 h-6" />
 
               {/* Text (visible on sm and up) */}
-              <span className="text-white font-bold pl-2 text-base sm:text-[34px]" style={{
+                  <span className="text-white font-bold pl-2 hidden sm:inline" style={{
+                fontSize: '34px',
                 fontFamily: 'Poppins, sans-serif',
               }}>
                 GoBus.SG
