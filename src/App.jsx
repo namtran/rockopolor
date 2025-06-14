@@ -23,38 +23,81 @@ function App() {
         />
       </Helmet>
 
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md shadow sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="block flex items-center space-x-2">
-  {/* Logo for mobile */}
-  <img
-    src={favIcon}
-    alt="GoBusSG"
-    className="h-6 w-6 sm:hidden"
-  />
+      <header className="bg-white/90 backdrop-blur-md shadow sticky top-0 z-50 h-16">
+  <div className="w-full pr-4 h-full flex justify-between items-stretch">
 
-  {/* Text for desktop */}
-  <span className="hidden sm:inline text-xl font-bold text-[#0EA672]">
-    GoBus SG
-  </span>
-</a>
-          <nav className="space-x-4">
-            {["Home", "Features", "About", "Feedback"].map((section) => (
-              <Link
-                key={section}
-                to={section}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="cursor-pointer hover:text-[#0EA672] font-medium capitalize"
-              >
-                {section}
-              </Link>
-            ))}
-          </nav>
+    {/* Left Section: Trapezoid logo block */}
+    <div className="relative">
+      <a href="/" className="block h-full">
+        <div className="relative hidden sm:flex h-full items-stretch">
+
+          {/* Bottom trapezoid (light orange) */}
+          <div
+            className="absolute left-0 text-transparent"
+            style={{
+              width: '400px',
+              height: '100%',
+              backgroundColor: '#ffe0b3',
+              clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+              zIndex: 1,
+            }}
+          />
+
+          {/* Middle trapezoid (white) */}
+          <div
+            className="absolute left-0 text-transparent"
+            style={{
+              width: '395px',
+              height: '100%',
+              backgroundColor: '#ffffff',
+              clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+              zIndex: 2,
+            }}
+          />
+
+          {/* Top trapezoid (orange) */}
+          <div
+            className="absolute left-0 text-white text-lg font-bold flex items-center justify-center"
+            style={{
+              width: '390px',
+              height: '100%',
+              backgroundColor: '#FDAC41',
+              clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+              zIndex: 3,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '34px',
+            }}
+          >
+            GoBus SG
+          </div>
         </div>
-      </header>
+
+        {/* Mobile logo */}
+        <img
+          src={favIcon}
+          alt="GoBusSG"
+          className="h-full sm:hidden"
+        />
+      </a>
+    </div>
+
+    {/* Right Menu (unchanged) */}
+    <nav className="space-x-4 flex items-center">
+      {["Home", "Features", "About", "Feedback"].map((section) => (
+        <Link
+          key={section}
+          to={section}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="cursor-pointer hover:text-[#0EA672] font-medium capitalize"
+        >
+          {section}
+        </Link>
+      ))}
+    </nav>
+  </div>
+</header>
 
       {/* Hero */}
       <section id="Home" className="bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-white text-center py-24 px-4">

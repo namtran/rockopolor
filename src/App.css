@@ -24,6 +24,9 @@
   color: white;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
 .App-link {
   color: #61dafb;
 }
