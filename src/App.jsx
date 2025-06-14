@@ -186,12 +186,24 @@ function App() {
       </section>
 
       {/* Features */}
-      <section id="Features" className="py-24 px-4 bg-[#f4fef8]">
+      <section id="Features" className="py-2 px-4 bg-[#f4fef8]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#fdac41] mb-12 text-left">Features</h2>
+          <h2
+            className="text-center font-semibold pt-8 pb-6"
+            style={{
+              fontSize: '32px',
+              fontFamily: 'Poppins, sans-serif',
+              color: '#F58220',
+            }}
+          >
+            Features
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: <FaBus />, title: "Bus Arrivals", text: "See live bus timings from nearby stops." },
+              {
+                icon: <FaBus />, title: "Bus Arrivals", text: "Live arrival times, stop-by-stop updates, and smarter bus tracking wherever you are."
+              },
               { icon: <FaSubway />, title: "MRT & LRT Planner", text: "Plan routes across MRT and LRT lines easily." },
               { icon: <FaTrain />, title: "Service Alerts", text: "Stay informed with real-time service disruptions." },
             ].map(({ icon, title, text }, index) => (
@@ -200,8 +212,10 @@ function App() {
                 whileHover={{ y: -6 }}
                 className={`bg-gradient-to-br from-[#44CB7D] via-[#5EE390] to-[#3CC172] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300`}
               >
-                <div className="text-white mb-4">{React.cloneElement(icon, { size: 40, className: "mx-auto" })}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+                <div className="flex items-center justify-center gap-3 text-white mb-4">
+                  {React.cloneElement(icon, { size: 32 })}
+                  <h3 className="text-lg font-semibold">{title}</h3>
+                </div>
                 <p className="text-white/90">{text}</p>
               </motion.div>
             ))}
