@@ -11,6 +11,7 @@ import screenshot3 from "./assets/screenshot3.jpg";
 import favIcon from "./assets/favicon.png";
 import aboutApp from "./assets/aboutApp.png";
 import Testimonials from "./Testimonials";
+import headerLogo from "./assets/headerLogo.png";
 
 function App() {
   return (
@@ -68,16 +69,19 @@ function App() {
               fontSize: '34px',
             }}
           >
-            GoBus SG
+              {/* Logo image (always visible) */}
+              <img src={headerLogo} alt="GoBusSG" className="w-6 h-6" />
+
+              {/* Text (visible on sm and up) */}
+              <span className="hidden sm:inline text-white font-bold pl-2" style={{
+                fontSize: '34px',
+                fontFamily: 'Poppins, sans-serif',
+              }}>
+                GoBus.SG
+              </span>
           </div>
         </div>
 
-        {/* Mobile logo */}
-        <img
-          src={favIcon}
-          alt="GoBusSG"
-          className="h-full sm:hidden"
-        />
       </a>
     </div>
 
