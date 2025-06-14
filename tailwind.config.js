@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         primary: '#44CB7D',
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'], // optional alias
+      },
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],

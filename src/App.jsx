@@ -8,112 +8,177 @@ import googleBadge from "./assets/google-play-badge.png";
 import screenshot1 from "./assets/screenshot1.jpg";
 import screenshot2 from "./assets/screenshot2.jpg";
 import screenshot3 from "./assets/screenshot3.jpg";
-import favIcon from "./assets/favicon.png";
 import aboutApp from "./assets/aboutApp.png";
 import Testimonials from "./Testimonials";
 import headerLogo from "./assets/headerLogo.png";
-
+import { useState } from "react";
+import heroBg from './assets/headerBackground.png';
+import HeroAppName from './assets/HeroAppName.png';
 function App() {
+
+  const sections = ["Home", "Features", "About", "Feedback"];
+
+  function HeaderNav() {
+    const [activeSection, setActiveSection] = useState("Home");
+
+    return (
+      <nav className="space-x-4 flex items-center">
+        {sections.map((section) => (
+          <Link
+            key={section}
+            to={section}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            spy={true}
+            onSetActive={() => setActiveSection(section)}
+            className={`cursor-pointer capitalize transition-colors duration-200 text-sm sm:text-base font-poppins ${activeSection === section
+              ? "text-[#00C855]"
+              : "text-gray-800 hover:text-[#0EA672]"
+              }`}
+          >
+            {section}
+          </Link>
+        ))}
+      </nav>
+    );
+  }
   return (
-    <div className="font-sans text-gray-800 scroll-smooth">
+    <div className="font-sans text-gray-800 scroll-smooth ">
       <Helmet>
         <title>GoBus Singapore – Bus, MRT & LRT Assistant</title>
         <meta
           name="description"
           content="Your smart travel companion for Bus, MRT and LRT in Singapore. Plan trips, get arrivals and service alerts – all in one app!"
         />
+
       </Helmet>
 
       <header className="bg-white/90 backdrop-blur-md shadow sticky top-0 z-50 h-16">
-  <div className="w-full pr-4 h-full flex justify-between items-stretch">
+        <div className="w-full pr-4 h-full flex justify-between items-stretch">
 
-    {/* Left Section: Trapezoid logo block */}
-    <div className="relative">
-      <a href="/" className="block h-full">
-        <div className="relative flex h-full items-stretch">
+          {/* Left Section: Trapezoid logo block */}
+          <div className="relative">
+            <a href="/" className="block h-full">
+              <div className="relative flex h-full items-stretch">
 
-          {/* Bottom trapezoid (light orange) */}
-          <div
-            className="absolute left-0 text-transparent w-[100px] sm:w-[400px]"
-            style={{
-              height: '100%',
-              backgroundColor: '#ffe0b3',
-              clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
-              zIndex: 1,
-            }}
-          />
+                {/* Bottom trapezoid (light orange) */}
+                <div
+                  className="absolute left-0 text-transparent w-[100px] sm:w-[600px]"
+                  style={{
+                    height: '100%',
+                    backgroundColor: '#ffe0b3',
+                    clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+                    zIndex: 1,
+                  }}
+                />
 
-          {/* Middle trapezoid (white) */}
-          <div
-            className="absolute left-0 text-transparent  w-[95px] sm:w-[395px]"
-            style={{
-              height: '100%',
-              backgroundColor: '#ffffff',
-              clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
-              zIndex: 2,
-            }}
-          />
+                {/* Middle trapezoid (white) */}
+                <div
+                  className="absolute left-0 text-transparent  w-[95px] sm:w-[595px]"
+                  style={{
+                    height: '100%',
+                    backgroundColor: '#ffffff',
+                    clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+                    zIndex: 2,
+                  }}
+                />
 
-          {/* Top trapezoid (orange) */}
-          <div
-            className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[90px] sm:w-[390px]"
-            style={{
-              height: '100%',
-              backgroundColor: '#FDAC41',
-              clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
-              zIndex: 3,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '34px',
-            }}
-          >
-              {/* Logo image (always visible) */}
-              <img src={headerLogo} alt="GoBusSG" className="w-6 h-6" />
+                {/* Top trapezoid (orange) */}
+                <div
+                  className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[90px] sm:w-[590px]"
+                  style={{
+                    height: '100%',
+                    backgroundColor: '#FFBB00',
+                    clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+                    zIndex: 3,
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '34px',
+                  }}
+                >
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="flex items-center"
 
-              {/* Text (visible on sm and up) */}
-                  <span className="text-white font-bold pl-2 hidden sm:inline" style={{
-                fontSize: '34px',
-                fontFamily: 'Poppins, sans-serif',
-              }}>
-                GoBus.SG
-              </span>
+                  >
+                    {/* Logo image (always visible) */}
+                    <img src={headerLogo} alt="GoBusSG" className="w-5 h-5 transition-transform duration-300 hover:scale-110 hover:drop-shadow-md" />
+
+                    {/* Text (visible on sm and up) */}
+                    <motion.span
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                      className="text-white font-bold pl-2 hidden sm:inline"
+                      style={{ fontSize: '34px', fontFamily: "Poppins, sans-serif" }}
+                    >
+                      GoBus.SG
+                    </motion.span>
+                  </motion.div>
+                </div>
+              </div>
+
+            </a>
           </div>
+
+          {/* Right Menu*/}
+          <HeaderNav />
+          {/* <nav className="space-x-4 flex items-center">
+            {["Home", "Features", "About", "Feedback"].map((section) => (
+              <Link
+                key={section}
+                to={section}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="cursor-pointer hover:text-[#0EA672] font-medium capitalize"
+              >
+                {section}
+              </Link>
+            ))}
+          </nav> */}
         </div>
-
-      </a>
-    </div>
-
-    {/* Right Menu (unchanged) */}
-    <nav className="space-x-4 flex items-center">
-      {["Home", "Features", "About", "Feedback"].map((section) => (
-        <Link
-          key={section}
-          to={section}
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="cursor-pointer hover:text-[#0EA672] font-medium capitalize"
-        >
-          {section}
-        </Link>
-      ))}
-    </nav>
-  </div>
-</header>
+      </header>
 
       {/* Hero */}
-      <section id="Home" className="bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-white text-center py-24 px-4">
+      <section id="Home" className="bg-cover bg-center bg-no-repeat text-white text-center py-24 px-4"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+        }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-  Get around Singapore smarter 🚍🚇🚆<br className="hidden sm:block" /> with GoBus SG
-</h2>
 
-          <p className="mb-8 text-lg">Real-time bus, MRT, and LRT tracking at your fingertips.</p>
-          <div className="flex justify-center items-center space-x-4">
+          <p
+            className="text-center pb-8 font-semibold"
+            style={{
+              fontSize: '24px',
+              fontFamily: 'Poppins, sans-serif',
+              color: '#04F86C',
+            }}
+          >
+            Get around Singapore smartly with<br className="hidden sm:block" />
+          </p>
+
+          <img src={HeroAppName} alt="GoBus SG" className="object-contain mx-auto" />
+
+          <p
+            className="text-center py-6"
+            style={{
+              fontSize: '16px',
+              fontFamily: 'Poppins, sans-serif',
+            }}
+          >
+            Real-time Bus, MRT, and LRT tracking at your fingertips
+          </p>
+          <div className="flex justify-center items-center space-x-4 pt-[30px]">
             <img src={appleBadge} alt="Download on the App Store" className="w-[120px] object-contain" />
             <img src={googleBadge} alt="Get it on Google Play" className="w-[135px] object-contain" />
           </div>
@@ -158,30 +223,30 @@ function App() {
         </div>
       </section>
 
-{/* About */}
-<section id="About" className="py-20 bg-[#f4fef8] px-4 overflow-x-hidden">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold text-[#fdac41] mb-6">
-      About the App
-    </h2>
-    <p className="text-lg mb-8 max-w-2xl">
-      GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
-    </p>
-    <div className="flex justify-center">
-      <img
-        src={aboutApp}
-        alt="GobusSG Preview"
-        className="w-full max-w-xs sm:max-w-sm rounded-lg shadow"
-      />
-    </div>
-  </div>
-</section>
+      {/* About */}
+      <section id="About" className="py-20 bg-[#f4fef8] px-4 overflow-x-hidden">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#fdac41] mb-6">
+            About the App
+          </h2>
+          <p className="text-lg mb-8 max-w-2xl">
+            GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
+          </p>
+          <div className="flex justify-center">
+            <img
+              src={aboutApp}
+              alt="GobusSG Preview"
+              className="w-full max-w-xs sm:max-w-sm rounded-lg shadow"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
       <Testimonials />
 
       {/* Feedback Form */}
-      <section id="Feedback" className="py-20 bg-[#f4fef8] px-4">
+      <section id="Feedback" className="py-20 bg-[#f4fef8] px-4 pb-80">
         <div className="max-w-2xl mx-auto bg-[#f9fdfb] p-8 rounded-xl shadow-md">
           <h2 className="text-3xl font-bold text-[#fdac41] mb-6">We’d love your feedback!</h2>
           <form
