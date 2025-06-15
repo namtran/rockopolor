@@ -17,6 +17,8 @@ import HeroAppName from './assets/HeroAppName.png';
 import FaArrowLeft from "./assets/nextIcon.png";
 import FaArrowRight from "./assets/previousIcon.png";
 import feedbackImage from "./assets/feedbackImage.png";
+import { FaFacebookF, FaXTwitter, FaTiktok } from 'react-icons/fa6';
+
 function App() {
 
   const screenshots = [screenshot1, screenshot2, screenshot3, screenshot4];
@@ -297,7 +299,7 @@ function App() {
 
       {/* Feedback Form */}
 
-      <section id="Feedback" className="pt-16 pb-[120px] bg-[white]">
+      <section id="Feedback" className="pt-16 pb-[120px] bg-[white] px-4">
         <div className="max-w-7xl mx-auto border-2 border-dotted border-[#00C855] rounded-2xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 md:p-8">
             {/* Left: Image */}
@@ -355,7 +357,38 @@ function App() {
 
       {/* Footer */}
       <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white">
-        &copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.
+        <div className="flex flex-col items-center space-y-3 sm:space-y-0 sm:flex-row sm:justify-between max-w-7xl mx-auto px-4">
+          <p>&copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.</p>
+          <div className="flex space-x-6">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="hover:text-white/80 transition"
+            >
+              <FaFacebookF size={20} />
+            </a>
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="hover:text-white/80 transition"
+            >
+              <FaXTwitter size={20} />
+            </a>
+            <a
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="hover:text-white/80 transition"
+            >
+              <FaTiktok size={20} />
+            </a>
+          </div>
+        </div>
       </footer>
 
     </div>
