@@ -23,7 +23,7 @@ function App() {
   <style>
     {`
     @media (max-width: 400px) {
-      .nav-menu {
+      .nav-menu-fix {
         justify-content: flex-end !important;
       }
     }
@@ -36,8 +36,8 @@ function App() {
     const [activeSection, setActiveSection] = useState("Home");
 
     return (
-      <div className="w-full flex justify-center px-4 sm:px-8 md:px-0">
-        <nav className="nav-menu-fix flex items-center flex-wrap justify-center gap-x-[10px] md:gap-x-[50px]">
+      <div className="w-full flex justify-center px-4 sm:px-8 md:px-0 nav-menu-fix">
+        <nav className=" flex items-center flex-wrap  gap-x-[10px] md:gap-x-[50px]">
 
           {sections.map((section) => (
             <Link
