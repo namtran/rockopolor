@@ -111,7 +111,7 @@ body {
 }
 
 @media (max-width: 400px) {
-  .menu-right {
+  .nav-menu {
     justify-content: flex-end;
   }
 }
