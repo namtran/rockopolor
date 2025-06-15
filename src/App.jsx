@@ -41,10 +41,11 @@ function App() {
               spy={true}
               spyThrottle={100}
               onSetActive={() => setActiveSection(section)}
-              className={`cursor-pointer capitalize transition-colors duration-200 text-[18px] font-semibold font-poppins ${activeSection === section
-                ? "text-[#00C855]"
-                : "text-gray-800 hover:text-[#0EA672]"
+              className={`cursor-pointer capitalize transition-colors duration-200 font-poppins font-semibold text-[14px] md:text-[18px] ${activeSection === section
+                  ? "text-[#00C855]"
+                  : "text-gray-800 hover:text-[#0EA672]"
                 }`}
+
             >
               {section}
             </Link>
