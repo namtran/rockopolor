@@ -28,26 +28,29 @@ function App() {
     const [activeSection, setActiveSection] = useState("Home");
 
     return (
-      <nav className="space-x-4 flex items-center">
-        {sections.map((section) => (
-          <Link
-            key={section}
-            to={section}
-            smooth={true}
-            duration={500}
-            offset={-150}
-            spy={true}
-            spyThrottle={100}
-            onSetActive={() => setActiveSection(section)}
-            className={`cursor-pointer capitalize transition-colors duration-200 text-sm sm:text-base font-poppins ${activeSection === section
-              ? "text-[#00C855]"
-              : "text-gray-800 hover:text-[#0EA672]"
-              }`}
-          >
-            {section}
-          </Link>
-        ))}
-      </nav>
+      <div className="w-full flex justify-center px-4 sm:px-8 md:px-0">
+        <nav className="space-x-4 flex items-center flex-wrap justify-center">
+          {sections.map((section) => (
+            <Link
+              key={section}
+              to={section}
+              smooth={true}
+              duration={500}
+              offset={-150}
+              spy={true}
+              spyThrottle={100}
+              onSetActive={() => setActiveSection(section)}
+              className={`cursor-pointer capitalize transition-colors duration-200 text-sm sm:text-base font-poppins ${activeSection === section
+                ? "text-[#00C855]"
+                : "text-gray-800 hover:text-[#0EA672]"
+                }`}
+            >
+              {section}
+            </Link>
+          ))}
+        </nav>
+      </div>
+
     );
   }
   return (
@@ -71,7 +74,7 @@ function App() {
 
                 {/* Bottom trapezoid (light orange) */}
                 <div
-                  className="absolute left-0 text-transparent w-[100px] sm:w-[600px]"
+                  className="absolute left-0 text-transparent w-[100px] sm:w-[400px]"
                   style={{
                     height: '100%',
                     backgroundColor: '#ffe0b3',
@@ -82,7 +85,7 @@ function App() {
 
                 {/* Middle trapezoid (white) */}
                 <div
-                  className="absolute left-0 text-transparent  w-[95px] sm:w-[595px]"
+                  className="absolute left-0 text-transparent  w-[95px] sm:w-[395px]"
                   style={{
                     height: '100%',
                     backgroundColor: '#ffffff',
@@ -93,7 +96,7 @@ function App() {
 
                 {/* Top trapezoid (orange) */}
                 <div
-                  className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[90px] sm:w-[590px]"
+                  className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[90px] sm:w-[390px]"
                   style={{
                     height: '100%',
                     backgroundColor: '#FFBB00',
@@ -123,7 +126,7 @@ function App() {
                       className="text-white font-bold pl-2 hidden sm:inline"
                       style={{ fontSize: '34px', fontFamily: "Poppins, sans-serif" }}
                     >
-                      GoBus.SG
+                      GoBus SG
                     </motion.span>
                   </motion.div>
                 </div>
@@ -372,7 +375,7 @@ function App() {
       {/* Feedback Form */}
 
       <section id="Feedback" className="pt-16 pb-[120px] bg-[white] px-4">
-        <div className="max-w-7xl mx-auto border-2 border-dotted border-[#00C855] rounded-2xl">
+        <div className="max-w-7xl mx-auto border-2 border-dotted border-[#A3D9A5] rounded-2xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 md:p-8">
             {/* Left: Image */}
             <div className="w-full md:w-1/2 flex justify-center">
