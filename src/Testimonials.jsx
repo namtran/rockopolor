@@ -38,16 +38,22 @@ const Testimonials = () => {
       behavior: 'smooth',
     });
   };
-  const gradientClasses = [
-    "bg-gradient-to-br from-[#44CB7D] via-[#5EE390] to-[#3CC172]",
-    "bg-gradient-to-br from-[#44CB7D] via-[#70DB97] to-[#2FAC6B]",
-    "bg-gradient-to-br from-[#44CB7D] via-[#5DDB89] to-[#38B16A]",
-  ];
 
   return (
-    <section className="bg-[#f4fef8] py-20 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto text-leftr">
-        <h3 className="text-3xl font-bold mb-12 text-[#fdac41]">What Our Users Say</h3>
+    <section className="bg-[white] py-20 px-4 sm:px-6">
+
+      <div className="max-w-7xl mx-auto text-leftr">
+
+        <h3
+          className="text-center font-semibold pt-8 pb-6"
+          style={{
+            fontSize: '32px',
+            fontFamily: 'Poppins, sans-serif',
+            color: '#F58220',
+          }}
+        >
+          What Our Users Say
+        </h3>
 
         <div className="overflow-hidden">
           <div
@@ -60,10 +66,11 @@ const Testimonials = () => {
                 className="w-[90%] sm:w-2/3 md:w-1/2 lg:w-1/3 shrink-0 snap-start px-3 my-4"
                 whileHover={{ scale: 1.02 }}
               >
-                <div className={`${gradientClasses[i % gradientClasses.length]} text-white p-6 md:p-8 rounded-2xl shadow-md h-full space-y-4`}>
-                <p className="italic">"{text}"</p>
-                <p className="text-sm font-semibold">{name}</p>
-              </div>
+                <div className="bg-white text-[#32343D] p-6 md:p-8 rounded-2xl h-full space-y-4 border border-[#EDEDED] shadow-[0_4px_8px_#EDEDED]">
+                  <p className="italic text-base">"{text}"</p> {/* 16px */}
+                  <p className="text-[#8B99B8] text-sm font-medium">{name}</p> {/* 14px */}
+                </div>
+
               </motion.div>
             ))}
           </div>
@@ -75,13 +82,13 @@ const Testimonials = () => {
             <button
               key={i}
               onClick={() => scrollToIndex(i)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentIndex === i ? 'bg-primary' : 'bg-gray-400'
-              }`}
+              className={`h-2 rounded-md transition-all duration-300 ${currentIndex === i ? 'w-8 bg-[#FDAC41]' : 'w-4 bg-[#00C855]'
+                }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
         </div>
+
       </div>
     </section>
   );

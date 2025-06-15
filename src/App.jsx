@@ -5,19 +5,23 @@ import { FaBus, FaSubway, FaTrain } from "react-icons/fa";
 import { Link } from "react-scroll";
 import appleBadge from "./assets/apple-store-badge.png";
 import googleBadge from "./assets/google-play-badge.png";
-import screenshot1 from "./assets/screenshot1.jpg";
-import screenshot2 from "./assets/screenshot2.jpg";
-import screenshot3 from "./assets/screenshot3.jpg";
-import aboutApp from "./assets/aboutApp.png";
+import screenshot1 from "./assets/screenshot1.png";
+import screenshot2 from "./assets/screenshot2.png";
+import screenshot3 from "./assets/screenshot3.png";
 import Testimonials from "./Testimonials";
 import headerLogo from "./assets/headerLogo.png";
 import { useState } from "react";
 import heroBg from './assets/headerBackground.png';
 import HeroAppName from './assets/HeroAppName.png';
+import FaArrowLeft from "./assets/nextIcon.png";
+import FaArrowRight from "./assets/previousIcon.png";
+import feedbackImage from "./assets/feedbackImage.png";
+import { Element } from 'react-scroll';
 function App() {
 
+  const screenshots = [screenshot1, screenshot2, screenshot3];
   const sections = ["Home", "Features", "About", "Feedback"];
-
+  const [current, setCurrent] = useState(0);
   function HeaderNav() {
     const [activeSection, setActiveSection] = useState("Home");
 
@@ -29,8 +33,9 @@ function App() {
             to={section}
             smooth={true}
             duration={500}
-            offset={-70}
+            offset={-100}
             spy={true}
+            spyThrottle={100}
             onSetActive={() => setActiveSection(section)}
             className={`cursor-pointer capitalize transition-colors duration-200 text-sm sm:text-base font-poppins ${activeSection === section
               ? "text-[#00C855]"
@@ -186,8 +191,8 @@ function App() {
       </section>
 
       {/* Features */}
-      <section id="Features" className="py-2 px-4 bg-[#f4fef8]">
-        <div className="max-w-6xl mx-auto">
+      <section id="Features" className="py-2 bg-[white]">
+        <div className="max-w-7xl mx-auto px-4">
           <h2
             className="text-center font-semibold pt-8 pb-6"
             style={{
@@ -223,35 +228,75 @@ function App() {
         </div>
       </section>
 
-      {/* Screenshots */}
-      <section className="bg-[#f4fef8] py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-bold mb-10 text-[#fdac41] text-left">Screenshots</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[screenshot1, screenshot2, screenshot3].map((src, i) => (
-              <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden p-4">
-                <motion.img src={src} alt={`screenshot${i}`} className="rounded-lg mx-auto" whileHover={{ scale: 1.03 }} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="About" className="bg-[white] py-20 px-4">
+        <div className="max-w-7xl mx-auto relative">
 
-      {/* About */}
-      <section id="About" className="py-20 bg-[#f4fef8] px-4 overflow-x-hidden">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#fdac41] mb-6">
-            About the App
-          </h2>
-          <p className="text-lg mb-8 max-w-2xl">
-            GoBus Singapore is your daily travel companion. We help you navigate public transport more efficiently — whether by bus, MRT, or LRT.
-          </p>
-          <div className="flex justify-center">
-            <img
-              src={aboutApp}
-              alt="GobusSG Preview"
-              className="w-full max-w-xs sm:max-w-sm rounded-lg shadow"
-            />
+          {/* Rounded Frame that wraps About + Screenshot container */}
+          <div className="bg-[#E4FBEE] rounded-3xl p-8 md:p-12 shadow-md flex flex-col md:flex-row justify-between relative overflow-visible min-h-[400px]">
+
+            {/* Left Side: About */}
+            <div className="md:w-1/2 pr-6 flex flex-col justify-between">
+              <h2
+                className="text-[#253455] mb-6 font-bold"
+                style={{
+                  fontSize: '32px',
+                  fontFamily: 'Poppins, sans-serif',
+                }}
+              >
+                About the App
+              </h2>
+              <p className="text-lg mb-6 pr-5">
+                GoBus Singapore is your everyday travel assistant. Access real-time bus, MRT, and LRT info and plan your route with ease.
+              </p>
+              <div className="flex justify-end mt-6 pr-5">
+                <div className="flex space-x-4">
+                  <button
+                    onClick={() => setCurrent(prev => (prev === 0 ? screenshots.length - 1 : prev - 1))}
+                    className="bg-white hover:scale-105 transition-transform duration-200 shadow-[0_4px_8px_#A6CCA8] hover:shadow-[0_6px_12px_#A6CCA8] p-3 rounded-full"
+
+                  >
+                    <img src={FaArrowRight} alt="Previous" width={24} />
+                  </button>
+                  <button
+                    onClick={() => setCurrent(prev => (prev === screenshots.length - 1 ? 0 : prev + 1))}
+                    className="bg-white hover:scale-105 transition-transform duration-200 shadow-[0_4px_8px_#A6CCA8] hover:shadow-[0_6px_12px_#A6CCA8] p-3 rounded-full"
+                  >
+                    <img src={FaArrowLeft} alt="Previous" width={24} />
+
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Right Side: Screenshots */}
+            {/* Screenshot Gallery */}
+            <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative">
+              <div className="relative md:absolute md:top-[-20px] md:-bottom-20 flex gap-4 justify-center mt-8">
+                {screenshots.map((src, i) => (
+                  <motion.div
+                    key={i}
+                    animate={{
+                      scale: current === i ? 1.15 : 1,
+                      opacity: current === i ? 1 : 0.7,
+                    }}
+
+                    whileTap={{ scale: 1.1 }}
+                    onMouseEnter={() => setCurrent(i)}
+                    onClick={() => setCurrent(i)}
+                    className="transition-all duration-300 cursor-pointer"
+                  >
+                    <img
+                      src={src}
+                      alt={`Screenshot ${i + 1}`}
+                      className="object-contain"
+                    />
+                  </motion.div>
+
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -260,21 +305,60 @@ function App() {
       <Testimonials />
 
       {/* Feedback Form */}
-      <section id="Feedback" className="py-20 bg-[#f4fef8] px-4 pb-80">
-        <div className="max-w-2xl mx-auto bg-[#f9fdfb] p-8 rounded-xl shadow-md">
-          <h2 className="text-3xl font-bold text-[#fdac41] mb-6">We’d love your feedback!</h2>
-          <form
-            action="https://formspree.io/f/xgvyarvn"
-            method="POST"
-            className="space-y-4"
-          >
-            <input type="text" name="name" placeholder="Full Name" required className="w-full border border-gray-300 rounded-md p-3" />
-            <input type="email" name="email" placeholder="Email Address" required className="w-full border border-gray-300 rounded-md p-3" />
-            <textarea name="message" placeholder="Your feedback or suggestions..." rows={4} required className="w-full border border-gray-300 rounded-md p-3" />
-            <button type="submit" className="bg-[#44CB7D] text-white px-6 py-2 rounded-md hover:bg-[#3abf72] transition">
-              Submit
-            </button>
-          </form>
+
+      <section id="Feedback" className="pt-16 pb-[120px] bg-[white]">
+        <div className="max-w-7xl mx-auto border-2 border-dotted border-[#00C855] rounded-2xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 md:p-8">
+            {/* Left: Image */}
+            <div className="w-full md:w-1/2 flex justify-center">
+              <img
+                src={feedbackImage} // replace with actual image path
+                alt="Feedback Visual"
+                className="w-[500px] h-[300px] object-cover rounded-xl"
+              />
+            </div>
+
+            {/* Right: Feedback Form */}
+            <div className="w-full md:w-1/2">
+              <div className="bg-white rounded-2xl p-6 md:p-8 space-y-4 shadow-sm">
+                <h3 className="text-2xl font-semibold text-[#253455] mb-4">We’d love your feedback</h3>
+                <p>Drop us a line! We are here to answer your questions.</p>
+                <form
+                  className="space-y-4"
+                  action="https://formspree.io/f/xgvyarvn"
+                  method="POST"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                    className="w-full border border-gray-300 rounded-md p-3"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    className="w-full border border-gray-300 rounded-md p-3"
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Your feedback or suggestions..."
+                    rows={4}
+                    required
+                    className="w-full border border-gray-300 rounded-md p-3"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#44CB7D] text-white px-6 py-2 rounded-md hover:bg-[#3abf72] transition"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
