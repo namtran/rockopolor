@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rockopolor/static/css/main.00c9cb4b.css",
+    "main.css": "/rockopolor/static/css/main.742684e6.css",
     "main.js": "/rockopolor/static/js/main.6a0d74be.js",
     "static/js/453.32088f1f.chunk.js": "/rockopolor/static/js/453.32088f1f.chunk.js",
     "static/media/headerBackground.png": "/rockopolor/static/media/headerBackground.d9cd9d7b93667fa305db.png",
@@ -12,12 +12,12 @@
     "static/media/HeroAppName.png": "/rockopolor/static/media/HeroAppName.ce650e749c1fe1d7a767.png",
     "static/media/google-play-badge.png": "/rockopolor/static/media/google-play-badge.1194e014998c301db97f.png",
     "index.html": "/rockopolor/index.html",
-    "main.00c9cb4b.css.map": "/rockopolor/static/css/main.00c9cb4b.css.map",
+    "main.742684e6.css.map": "/rockopolor/static/css/main.742684e6.css.map",
     "main.6a0d74be.js.map": "/rockopolor/static/js/main.6a0d74be.js.map",
     "453.32088f1f.chunk.js.map": "/rockopolor/static/js/453.32088f1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00c9cb4b.css",
+    "static/css/main.742684e6.css",
     "static/js/main.6a0d74be.js"
   ]
 }
