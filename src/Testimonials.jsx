@@ -44,16 +44,31 @@ const Testimonials = () => {
 
       <div className="max-w-7xl mx-auto text-leftr">
 
-        <h3
-          className="text-center font-semibold pt-8 pb-6"
-          style={{
-            fontSize: '32px',
-            fontFamily: 'Poppins, sans-serif',
-            color: '#F58220',
-          }}
-        >
-          What Our Users Say
-        </h3>
+        <div className="pb-6 text-center">
+          <div className="relative inline-block text-center">
+            <h2
+              className="relative z-10 font-semibold"
+              style={{
+                fontSize: '32px',
+                fontFamily: 'Poppins, sans-serif',
+                color: '#F58220',
+              }}
+            >
+              What Our Users Say
+            </h2>
+            <span
+              className="absolute left-1/2 bottom-0 z-0"
+              style={{
+                transform: 'translateX(-50%)', // 👈 3px is half of 6px height
+                width: '100%',
+                height: '6px',
+                backgroundColor: '#FFD8A6',
+                borderRadius: '4px',
+              }}
+            />
+          </div>
+
+        </div>
 
         <div className="overflow-hidden">
           <div

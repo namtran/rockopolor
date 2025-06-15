@@ -18,7 +18,7 @@ import FaArrowLeft from "./assets/nextIcon.png";
 import FaArrowRight from "./assets/previousIcon.png";
 import feedbackImage from "./assets/feedbackImage.png";
 import { FaFacebookF, FaXTwitter, FaTiktok } from 'react-icons/fa6';
-
+import { FaBell, FaExclamationCircle } from 'react-icons/fa';
 function App() {
 
   const screenshots = [screenshot1, screenshot2, screenshot3, screenshot4];
@@ -172,26 +172,62 @@ function App() {
             Real-time Bus, MRT, and LRT tracking at your fingertips
           </p>
           <div className="flex justify-center items-center space-x-4 pt-[30px]">
-            <img src={appleBadge} alt="Download on the App Store" className="w-[120px] object-contain" />
-            <img src={googleBadge} alt="Get it on Google Play" className="w-[135px] object-contain" />
+            <a
+              href="https://apps.apple.com/app/id1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={appleBadge}
+                alt="Download on the App Store"
+                className="w-[120px] object-contain"
+              />
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=com.example.gobus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={googleBadge}
+                alt="Get it on Google Play"
+                className="w-[135px] object-contain"
+              />
+            </a>
           </div>
+
         </motion.div>
       </section>
 
       {/* Features */}
       <section id="Features" className="py-8 bg-[white]">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2
-            className="text-center font-semibold pt-8 pb-6"
-            style={{
-              fontSize: '32px',
-              fontFamily: 'Poppins, sans-serif',
-              color: '#F58220',
-            }}
-          >
-            Features
-          </h2>
+        <div className="max-w-7xl mx-auto px-4 text-center pb-6">
+          <div className="pb-6">
+            <div className="relative inline-block text-center">
+              <h2
+                className="relative z-10 font-semibold"
+                style={{
+                  fontSize: '32px',
+                  fontFamily: 'Poppins, sans-serif',
+                  color: '#F58220',
+                }}
+              >
+                Features
+              </h2>
+              <span
+                className="absolute left-1/2 bottom-0 z-0"
+                style={{
+                  transform: 'translateX(-50%)', // 👈 3px is half of 6px height
+                  width: '100%',
+                  height: '6px',
+                  backgroundColor: '#FFD8A6',
+                  borderRadius: '4px',
+                }}
+              />
+            </div>
 
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -210,7 +246,26 @@ function App() {
                 className={`bg-gradient-to-br from-[#44CB7D] via-[#5EE390] to-[#3CC172] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300`}
               >
                 <div className="flex items-center justify-center gap-3 text-white mb-4">
-                  {React.cloneElement(icon, { size: 32 })}
+                  {index === 2 ? (
+                    <div className="relative">
+                      <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
+                        <FaTrain size={28} />
+                      </div>
+
+                      {/* Bell + Alert Icon */}
+                      <div className="absolute -top-1 -right-1 p-1">
+                        <FaBell size={12} className="text-[white]" />
+                        <FaExclamationCircle
+                          size={10}
+                          className="text-white absolute top-0 right-0"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
+                      {React.cloneElement(icon, { size: 28 })}
+                    </div>
+                  )}
                   <h3 className="text-lg font-semibold">{title}</h3>
                 </div>
                 <p className="text-white/90">{text}</p>
@@ -228,15 +283,32 @@ function App() {
 
             {/* Left Side: About */}
             <div className="md:w-1/2 pr-6 flex flex-col justify-between">
-              <h2
-                className="text-[#253455] mb-6 font-bold"
-                style={{
-                  fontSize: '32px',
-                  fontFamily: 'Poppins, sans-serif',
-                }}
-              >
-                About the App
-              </h2>
+              <div className="pb-1">
+                <div className="relative inline-block text-center">
+                  <h2
+                    className="relative z-10 font-semibold"
+                    style={{
+                      fontSize: '32px',
+                      fontFamily: 'Poppins, sans-serif',
+                      color: '#253455',
+                    }}
+                  >
+                    About the App
+                  </h2>
+                  <span
+                    className="absolute left-1/2 bottom-0 z-0"
+                    style={{
+                      transform: 'translateX(-50%)', // 👈 3px is half of 6px height
+                      width: '100%',
+                      height: '6px',
+                      backgroundColor: '#88D8AB',
+                      borderRadius: '4px',
+                    }}
+                  />
+                </div>
+
+              </div>
+
               <p className="text-lg mb-6 pr-5">
                 GoBus Singapore is your everyday travel assistant. Access real-time bus, MRT, and LRT info and plan your route with ease.
               </p>
