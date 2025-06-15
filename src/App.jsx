@@ -20,14 +20,7 @@ import feedbackImage from "./assets/feedbackImage.png";
 import { FaFacebookF, FaXTwitter, FaTiktok } from 'react-icons/fa6';
 import { FaBell, FaExclamationCircle } from 'react-icons/fa';
 function App() {
-  <style>
-    {`
-    footer {
-      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
-      padding-bottom: calc(1.5rem + constant(safe-area-inset-bottom));
-    }
-  `}
-  </style>
+
   const screenshots = [screenshot1, screenshot2, screenshot3, screenshot4];
   const sections = ["Home", "Features", "About", "Feedback"];
   const [current, setCurrent] = useState(0);
@@ -440,10 +433,10 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white"
-      >
+      <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white">
         <div className="flex flex-col items-center space-y-3 sm:space-y-0 sm:flex-row sm:justify-between max-w-7xl mx-auto px-4">
-          <p>&copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.</p>
+
+          {/* Social icons come first now */}
           <div className="flex space-x-6">
             <a
               href="https://facebook.com"
@@ -472,6 +465,14 @@ function App() {
             >
               <FaTiktok size={20} />
             </a>
+          </div>
+
+          {/* Footer text on the right */}
+          <div className="space-y-1 text-center sm:text-right">
+            <p>&copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.</p>
+            <p className="text-white/80 text-xs sm:text-sm">
+              GoBus Singapore is committed to making city travel smarter, greener, and more connected.
+            </p>
           </div>
         </div>
       </footer>
