@@ -29,7 +29,7 @@ function App() {
 
     return (
       <div className="w-full flex justify-center px-4 sm:px-8 md:px-0">
-        <nav className="flex items-center flex-wrap justify-center gap-x-[10px] md:gap-x-[50px]">
+        <nav className="flex items-center flex-wrap justify-center gap-x-[10px] md:gap-x-[50px] [@media(max-width:400px)]:justify-end">
 
           {sections.map((section) => (
             <Link
@@ -42,8 +42,8 @@ function App() {
               spyThrottle={100}
               onSetActive={() => setActiveSection(section)}
               className={`cursor-pointer capitalize transition-colors duration-200 font-poppins font-semibold text-[14px] md:text-[18px] ${activeSection === section
-                  ? "text-[#00C855]"
-                  : "text-gray-800 hover:text-[#0EA672]"
+                ? "text-[#00C855]"
+                : "text-gray-800 hover:text-[#0EA672]"
                 }`}
 
             >
