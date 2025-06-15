@@ -29,7 +29,8 @@ function App() {
 
     return (
       <div className="w-full flex justify-center px-4 sm:px-8 md:px-0">
-        <nav className="gap-x-[50px] flex items-center flex-wrap justify-center">
+        <nav className="flex items-center flex-wrap justify-center gap-x-[10px] md:gap-x-[50px]">
+
           {sections.map((section) => (
             <Link
               key={section}
