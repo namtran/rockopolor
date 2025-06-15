@@ -109,9 +109,3 @@ body {
   bottom: 0;
   right: 0;
 }
-
-@media (max-width: 400px) {
-  .nav-menu {
-    justify-content: flex-end;
-  }
-}
