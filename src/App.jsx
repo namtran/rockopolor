@@ -200,6 +200,10 @@ function App() {
             ].map(({ icon, title, text }, index) => (
               <motion.div
                 key={title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
                 whileHover={{ y: -6 }}
                 className={`bg-gradient-to-br from-[#44CB7D] via-[#5EE390] to-[#3CC172] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300`}
               >
@@ -234,7 +238,8 @@ function App() {
               <p className="text-lg mb-6 pr-5">
                 GoBus Singapore is your everyday travel assistant. Access real-time bus, MRT, and LRT info and plan your route with ease.
               </p>
-              <div className="flex justify-end mt-6 pr-5">
+              <div className="flex justify-center md:justify-end mt-6 pr-0 md:pr-5">
+
                 <div className="flex space-x-4">
                   <button
                     onClick={() => setCurrent(prev => (prev === 0 ? screenshots.length - 1 : prev - 1))}
