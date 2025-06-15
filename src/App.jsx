@@ -8,6 +8,7 @@ import googleBadge from "./assets/google-play-badge.png";
 import screenshot1 from "./assets/screenshot1.png";
 import screenshot2 from "./assets/screenshot2.png";
 import screenshot3 from "./assets/screenshot3.png";
+import screenshot4 from "./assets/screenshot4.png";
 import Testimonials from "./Testimonials";
 import headerLogo from "./assets/headerLogo.png";
 import { useState } from "react";
@@ -16,10 +17,9 @@ import HeroAppName from './assets/HeroAppName.png';
 import FaArrowLeft from "./assets/nextIcon.png";
 import FaArrowRight from "./assets/previousIcon.png";
 import feedbackImage from "./assets/feedbackImage.png";
-import { Element } from 'react-scroll';
 function App() {
 
-  const screenshots = [screenshot1, screenshot2, screenshot3];
+  const screenshots = [screenshot1, screenshot2, screenshot3, screenshot4];
   const sections = ["Home", "Features", "About", "Feedback"];
   const [current, setCurrent] = useState(0);
   function HeaderNav() {
@@ -33,7 +33,7 @@ function App() {
             to={section}
             smooth={true}
             duration={500}
-            offset={-100}
+            offset={-150}
             spy={true}
             spyThrottle={100}
             onSetActive={() => setActiveSection(section)}
@@ -132,20 +132,6 @@ function App() {
 
           {/* Right Menu*/}
           <HeaderNav />
-          {/* <nav className="space-x-4 flex items-center">
-            {["Home", "Features", "About", "Feedback"].map((section) => (
-              <Link
-                key={section}
-                to={section}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="cursor-pointer hover:text-[#0EA672] font-medium capitalize"
-              >
-                {section}
-              </Link>
-            ))}
-          </nav> */}
         </div>
       </header>
 
@@ -191,7 +177,7 @@ function App() {
       </section>
 
       {/* Features */}
-      <section id="Features" className="py-2 bg-[white]">
+      <section id="Features" className="py-8 bg-[white]">
         <div className="max-w-7xl mx-auto px-4">
           <h2
             className="text-center font-semibold pt-8 pb-6"
@@ -228,7 +214,7 @@ function App() {
         </div>
       </section>
 
-      <section id="About" className="bg-[white] py-20 px-4">
+      <section id="About" className="bg-[white] py-16 px-4">
         <div className="max-w-7xl mx-auto relative">
 
           {/* Rounded Frame that wraps About + Screenshot container */}

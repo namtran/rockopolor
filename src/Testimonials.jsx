@@ -40,7 +40,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[white] py-20 px-4 sm:px-6">
+    <section className="bg-[white] py-16 px-4 sm:px-6">
 
       <div className="max-w-7xl mx-auto text-leftr">
 
@@ -82,7 +82,7 @@ const Testimonials = () => {
             <button
               key={i}
               onClick={() => scrollToIndex(i)}
-              className={`h-2 rounded-md transition-all duration-300 ${currentIndex === i ? 'w-8 bg-[#FDAC41]' : 'w-4 bg-[#00C855]'
+              className={`h-1 rounded-md transition-all duration-300 ${currentIndex === i ? 'w-8 bg-[#FDAC41]' : 'w-4 bg-[#00C855]'
                 }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />

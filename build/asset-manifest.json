@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/rockopolor/static/css/main.221387f7.css",
-    "main.js": "/rockopolor/static/js/main.467551e5.js",
+    "main.css": "/rockopolor/static/css/main.d043419b.css",
+    "main.js": "/rockopolor/static/js/main.cae18d54.js",
     "static/js/453.32088f1f.chunk.js": "/rockopolor/static/js/453.32088f1f.chunk.js",
     "static/media/headerBackground.png": "/rockopolor/static/media/headerBackground.d9cd9d7b93667fa305db.png",
     "static/media/screenshot3.png": "/rockopolor/static/media/screenshot3.6fd902d1f88473bec4b3.png",
+    "static/media/screenshot4.png": "/rockopolor/static/media/screenshot4.6fd902d1f88473bec4b3.png",
     "static/media/feedbackImage.png": "/rockopolor/static/media/feedbackImage.faa829aac19cfd923ef5.png",
     "static/media/screenshot2.png": "/rockopolor/static/media/screenshot2.920540c123ee8533bae6.png",
     "static/media/screenshot1.png": "/rockopolor/static/media/screenshot1.2c998d2a5232b889838d.png",
     "static/media/HeroAppName.png": "/rockopolor/static/media/HeroAppName.ce650e749c1fe1d7a767.png",
     "static/media/google-play-badge.png": "/rockopolor/static/media/google-play-badge.1194e014998c301db97f.png",
     "index.html": "/rockopolor/index.html",
-    "main.221387f7.css.map": "/rockopolor/static/css/main.221387f7.css.map",
-    "main.467551e5.js.map": "/rockopolor/static/js/main.467551e5.js.map",
+    "main.d043419b.css.map": "/rockopolor/static/css/main.d043419b.css.map",
+    "main.cae18d54.js.map": "/rockopolor/static/js/main.cae18d54.js.map",
     "453.32088f1f.chunk.js.map": "/rockopolor/static/js/453.32088f1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.221387f7.css",
-    "static/js/main.467551e5.js"
+    "static/css/main.d043419b.css",
+    "static/js/main.cae18d54.js"
   ]
 }
