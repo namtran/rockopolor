@@ -20,15 +20,6 @@ import feedbackImage from "./assets/feedbackImage.png";
 import { FaFacebookF, FaXTwitter, FaTiktok } from 'react-icons/fa6';
 import { FaBell, FaExclamationCircle } from 'react-icons/fa';
 function App() {
-  <style>
-    {`
-    @media (max-width: 400px) {
-      .nav-menu-fix {
-        justify-content: flex-end !important;
-      }
-    }
-  `}
-  </style>
   const screenshots = [screenshot1, screenshot2, screenshot3, screenshot4];
   const sections = ["Home", "Features", "About", "Feedback"];
   const [current, setCurrent] = useState(0);
@@ -441,7 +432,8 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white">
+      <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white"
+        style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
         <div className="flex flex-col items-center space-y-3 sm:space-y-0 sm:flex-row sm:justify-between max-w-7xl mx-auto px-4">
           <p>&copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.</p>
           <div className="flex space-x-6">
