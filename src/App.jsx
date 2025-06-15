@@ -23,7 +23,7 @@ function App() {
   <style>
     {`
     @media (max-width: 400px) {
-      .nav-menu-fix {
+      .nav-menu-fix > nav {
         justify-content: flex-end !important;
       }
     }
@@ -37,7 +37,7 @@ function App() {
 
     return (
       <div className="w-full flex justify-center px-4 sm:px-8 md:px-0 nav-menu-fix">
-        <nav className=" flex items-center flex-wrap  gap-x-[10px] md:gap-x-[50px]">
+        <nav className="flex items-center flex-wrap gap-x-[10px] md:gap-x-[50px]">
 
           {sections.map((section) => (
             <Link
