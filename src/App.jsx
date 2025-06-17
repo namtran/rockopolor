@@ -205,9 +205,8 @@ function App() {
         </motion.div>
       </section>
 
-      {/* Features */}
       <section id="Features" className="pt-8 bg-[white]">
-        <div className="max-w-7xl mx-auto px-4 text-center pb-6">
+        <div className="max-w-7xl mx-auto text-center pb-6">
           <div className="pb-6">
             <div className="relative inline-block text-center">
               <h2
@@ -223,7 +222,7 @@ function App() {
               <span
                 className="absolute left-1/2 bottom-0 z-0"
                 style={{
-                  transform: 'translateX(-50%)', // 👈 3px is half of 6px height
+                  transform: 'translateX(-50%)',
                   width: '100%',
                   height: '6px',
                   backgroundColor: '#FFD8A6',
@@ -231,56 +230,71 @@ function App() {
                 }}
               />
             </div>
-
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <FaBus />, title: "Bus Arrivals", text: "Live arrival times, stop-by-stop updates, and smarter bus tracking wherever you are."
+                icon: <FaBus />,
+                title: "Bus Arrivals",
+                text: "Live arrival times, stop-by-stop updates, and smarter bus tracking wherever you are."
               },
-              { icon: <FaSubway />, title: "MRT & LRT Planner", text: "Plan routes across MRT and LRT lines easily." },
-              { icon: <FaTrain />, title: "Service Alerts", text: "Stay informed with real-time service disruptions." },
-            ].map(({ icon, title, text }, index) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
-                whileHover={{ y: -6 }}
-                className="bg-gradient-to-br from-[#19AF7E] to-[#4EE09A] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300 border-[1px] border-[#30B37C]"
-              >
-                <div className="flex items-center justify-center gap-3 text-white mb-4">
-                  {index === 2 ? (
-                    <div className="relative">
-                      <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
-                        <FaTrain size={28} />
-                      </div>
-                      {/* Bell + Alert Icon */}
-                      <div className="absolute -top-1 -right-1 p-1">
-                        <FaBell size={12} className="text-white" />
-                        <FaExclamationCircle
-                          size={10}
-                          className="text-white absolute top-0 right-0"
-                        />
-                      </div>
+              {
+                icon: <FaSubway />,
+                title: "MRT & LRT Planner",
+                text: "Plan routes across MRT and LRT lines easily. Find the quickest, smoothest way to your destination."
+              },
+              {
+                icon: <FaTrain />,
+                title: "Service Alerts",
+                text: "Stay informed with real-time service disruptions. Get notified instantly when delays or changes occur."
+              },
+            ]
+              .map(({ icon, title, text }, index, arr) => (
+                <div
+                  key={title}
+                  className={`${index === 0 ? "pr-4" : index === arr.length - 1 ? "pl-4" : "px-4"
+                    }`}
+                >
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
+                    whileHover={{ y: -6 }}
+                    className="bg-gradient-to-br from-[#19AF7E] to-[#4EE09A] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300 border-[1px] border-[#30B37C]"
+                  >
+                    <div className="flex items-center justify-center gap-3 text-white mb-4">
+                      {index === 2 ? (
+                        <div className="relative">
+                          <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
+                            <FaTrain size={28} />
+                          </div>
+                          <div className="absolute -top-1 -right-1 p-1">
+                            <FaBell size={12} className="text-white" />
+                            <FaExclamationCircle
+                              size={10}
+                              className="text-white absolute top-0 right-0"
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
+                          {React.cloneElement(icon, { size: 28 })}
+                        </div>
+                      )}
+                      <h3 className="text-lg font-semibold">{title}</h3>
                     </div>
-                  ) : (
-                    <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
-                      {React.cloneElement(icon, { size: 28 })}
-                    </div>
-                  )}
-                  <h3 className="text-lg font-semibold">{title}</h3>
+                    <p className="text-white/90">{text}</p>
+                  </motion.div>
                 </div>
-                <p className="text-white/90">{text}</p>
-              </motion.div>
-            ))}
+              ))}
           </div>
-
         </div>
       </section>
 
-      <section id="About" className="bg-[white] pt-[50px] pb-[70px] px-4">
+      <section id="About" className="bg-[white] pt-[50px] pb-[1px] lg:pb-[70px] px-4">
+
         <div className="max-w-7xl mx-auto relative">
 
           {/* Rounded Frame that wraps About + Screenshot container */}
