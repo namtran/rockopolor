@@ -8,7 +8,7 @@ import googleBadge from "./assets/google-play-badge-logo.svg";
 import screenshot1 from "./assets/screenshot1.png";
 import screenshot2 from "./assets/screenshot2.png";
 import screenshot3 from "./assets/screenshot3.png";
-import screenshot4 from "./assets/screenshot4.png";
+//import screenshot4 from "./assets/screenshot4.png";
 import Testimonials from "./Testimonials";
 import headerLogo from "./assets/logoHeader.svg";
 import { useState } from "react";
@@ -391,7 +391,30 @@ function App() {
       {/* Feedback Form */}
 
       <section id="Feedback" className="pt-16 pb-[120px] bg-[white] px-4">
-        <div className="max-w-7xl mx-auto border-2 border-dotted border-[#A3D9A5] rounded-2xl">
+        <div className="relative max-w-7xl mx-auto rounded-2xl overflow-hidden">
+
+          {/* Responsive dashed border */}
+          <svg
+            className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 100 100"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="99"
+              height="99"
+              rx="3"
+              ry="3"
+              fill="none"
+              stroke="#A3D9A5"
+              strokeWidth="1"
+              strokeDasharray="6,6"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
+
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-2 md:p-4">
             {/* Left: Image */}
             <div className="w-full md:w-1/2 flex justify-center">

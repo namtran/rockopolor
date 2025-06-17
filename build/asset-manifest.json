@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/rockopolor/static/css/main.b7bdc0da.css",
-    "main.js": "/rockopolor/static/js/main.37d204d5.js",
+    "main.css": "/rockopolor/static/css/main.6508e7f3.css",
+    "main.js": "/rockopolor/static/js/main.e40c7ce9.js",
     "static/js/453.32088f1f.chunk.js": "/rockopolor/static/js/453.32088f1f.chunk.js",
     "static/media/headerBackground.png": "/rockopolor/static/media/headerBackground.d9cd9d7b93667fa305db.png",
     "static/media/screenshot3.png": "/rockopolor/static/media/screenshot3.6fd902d1f88473bec4b3.png",
-    "static/media/screenshot4.png": "/rockopolor/static/media/screenshot4.6fd902d1f88473bec4b3.png",
     "static/media/feedbackImage.png": "/rockopolor/static/media/feedbackImage.faa829aac19cfd923ef5.png",
     "static/media/screenshot2.png": "/rockopolor/static/media/screenshot2.920540c123ee8533bae6.png",
     "static/media/screenshot1.png": "/rockopolor/static/media/screenshot1.2c998d2a5232b889838d.png",
@@ -14,12 +13,12 @@
     "static/media/google-play-badge-logo.svg": "/rockopolor/static/media/google-play-badge-logo.d719bd8041f575469ec0cd5cf6525532.svg",
     "static/media/logoHeader.svg": "/rockopolor/static/media/logoHeader.e9c14816a4cbbf7c9e5fee18960b1703.svg",
     "index.html": "/rockopolor/index.html",
-    "main.b7bdc0da.css.map": "/rockopolor/static/css/main.b7bdc0da.css.map",
-    "main.37d204d5.js.map": "/rockopolor/static/js/main.37d204d5.js.map",
+    "main.6508e7f3.css.map": "/rockopolor/static/css/main.6508e7f3.css.map",
+    "main.e40c7ce9.js.map": "/rockopolor/static/js/main.e40c7ce9.js.map",
     "453.32088f1f.chunk.js.map": "/rockopolor/static/js/453.32088f1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7bdc0da.css",
-    "static/js/main.37d204d5.js"
+    "static/css/main.6508e7f3.css",
+    "static/js/main.e40c7ce9.js"
   ]
 }
