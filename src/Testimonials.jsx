@@ -97,7 +97,7 @@ const Testimonials = () => {
             <button
               key={i}
               onClick={() => scrollToIndex(i)}
-              className={`h-1 rounded-md transition-all duration-300 ${currentIndex === i ? 'w-8 bg-[#FDAC41]' : 'w-4 bg-[#00C855]'
+              className={`h-[2px] rounded-md transition-all duration-300 ${currentIndex === i ? 'w-[40px] bg-[#FDAC41]' : 'w-[15px] bg-[#00C855]'
                 }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />

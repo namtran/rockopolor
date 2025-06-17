@@ -205,9 +205,9 @@ function App() {
         </motion.div>
       </section>
 
-      <section id="Features" className="pt-8 bg-[white]">
-        <div className="max-w-7xl mx-auto text-center pb-6">
-          <div className="pb-6">
+      <section id="Features" className="pt-8 bg-[white] px-4">
+        <div className="max-w-7xl mx-auto pb-6">
+          <div className="pb-6 text-center">
             <div className="relative inline-block text-center">
               <h2
                 className="relative z-10 font-semibold"
@@ -232,12 +232,13 @@ function App() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 justify-items-start md:justify-items-stretch">
+
             {[
               {
                 icon: <FaBus />,
                 title: "Bus Arrivals",
-                text: "Live arrival times, stop-by-stop updates, and smarter bus tracking wherever you are."
+                text: "Live arrival times, stop-by-stop tracking, and real-time updates for a smoother commute."
               },
               {
                 icon: <FaSubway />,
@@ -253,8 +254,7 @@ function App() {
               .map(({ icon, title, text }, index, arr) => (
                 <div
                   key={title}
-                  className={`${index === 0 ? "pr-4" : index === arr.length - 1 ? "pl-4" : "px-4"
-                    }`}
+                  className=""
                 >
                   <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -264,7 +264,7 @@ function App() {
                     whileHover={{ y: -6 }}
                     className="bg-gradient-to-br from-[#19AF7E] to-[#4EE09A] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300 border-[1px] border-[#30B37C]"
                   >
-                    <div className="flex items-center justify-center gap-3 text-white mb-4">
+                    <div className="flex items-center text-left gap-3 text-white mb-4">
                       {index === 2 ? (
                         <div className="relative">
                           <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
@@ -293,7 +293,7 @@ function App() {
         </div>
       </section>
 
-      <section id="About" className="bg-[white] pt-[50px] pb-[1px] lg:pb-[70px] px-4">
+      <section id="About" className="bg-[white] pt-[50px] pb-[1px] lg:pb-[160px] px-4">
 
         <div className="max-w-7xl mx-auto relative">
 
@@ -301,7 +301,7 @@ function App() {
           <div className="bg-[#E4FBEE] rounded-3xl p-8 md:p-12 shadow-md flex flex-col md:flex-row justify-between relative overflow-visible min-h-[400px]">
 
             {/* Left Side: About */}
-            <div className="md:w-1/2 pr-6 flex flex-col justify-between">
+            <div className="md:w-2/5 pr-6 flex flex-col justify-between">
               <div className="pb-1">
                 <div className="relative inline-block text-center">
                   <h2
@@ -355,8 +355,8 @@ function App() {
 
             {/* Right Side: Screenshots */}
             {/* Screenshot Gallery */}
-            <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative">
-              <div className="relative md:absolute md:top-[-20px] md:-bottom-20 flex gap-4 justify-center mt-8">
+            <div className="md:w-3/5 flex justify-center mt-10 md:mt-0 relative">
+              <div className="relative md:absolute md:top-[-20px] md:-bottom-20 flex gap-4 justify-center mt-6">
                 {screenshots.map((src, i) => (
                   <motion.div
                     key={i}
@@ -446,20 +446,20 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white">
-        <div className="flex flex-col items-center space-y-3 sm:space-y-0 sm:flex-row sm:justify-between max-w-7xl mx-auto px-4">
-          {/* Footer text on the right */}
-          <div className="space-y-1 text-center sm:text-right">
+        <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between max-w-7xl mx-auto px-4">
+          {/* Footer text aligned left */}
+          <div className="space-y-1 text-center sm:text-left">
             <p>&copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.</p>
             <p className="text-white/80 text-xs sm:text-sm">
               GoBus Singapore is committed to making city travel smarter, greener, and more connected.
             </p>
           </div>
-          {/* Social icons come first now */}
-          <div className="flex flex-col space-y-2">
-            <span className="text-white text-sm">Social media links</span>
-            <div className="flex space-x-10">
+
+          {/* Social section with label and icons aligned horizontally */}
+          <div className="flex items-center gap-4">
+            <span className="text-white text-sm whitespace-nowrap">Social links</span>
+            <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -489,7 +489,6 @@ function App() {
               </a>
             </div>
           </div>
-
         </div>
       </footer>
 
