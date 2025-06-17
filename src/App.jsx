@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import { FaBus, FaSubway, FaTrain } from "react-icons/fa";
 import { Link } from "react-scroll";
-import appleBadge from "./assets/apple-store-badge.png";
-import googleBadge from "./assets/google-play-badge.png";
+import appleBadge from "./assets/apple-store-badge.svg";
+import googleBadge from "./assets/google-play-badge-logo.svg";
 import screenshot1 from "./assets/screenshot1.png";
 import screenshot2 from "./assets/screenshot2.png";
 import screenshot3 from "./assets/screenshot3.png";
@@ -185,7 +185,7 @@ function App() {
               <img
                 src={appleBadge}
                 alt="Download on the App Store"
-                className="w-[120px] object-contain"
+                className="w-[140px] object-contain"
               />
             </a>
 
@@ -197,7 +197,7 @@ function App() {
               <img
                 src={googleBadge}
                 alt="Get it on Google Play"
-                className="w-[135px] object-contain"
+                className="w-[160px] object-contain"
               />
             </a>
           </div>
