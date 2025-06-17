@@ -298,7 +298,7 @@ function App() {
         <div className="max-w-7xl mx-auto relative">
 
           {/* Rounded Frame that wraps About + Screenshot container */}
-          <div className="bg-[#E4FBEE] rounded-3xl p-8 md:p-12 shadow-md flex flex-col md:flex-row justify-between relative overflow-visible min-h-[400px]">
+          <div className="bg-[#E4FBEE] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between relative overflow-visible min-h-[400px]">
 
             {/* Left Side: About */}
             <div className="md:w-2/5 pr-6 flex flex-col justify-between">

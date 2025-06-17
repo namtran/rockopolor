@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rockopolor/static/css/main.54e438d7.css",
-    "main.js": "/rockopolor/static/js/main.a0be2df0.js",
+    "main.css": "/rockopolor/static/css/main.f9f30d34.css",
+    "main.js": "/rockopolor/static/js/main.4b6afb6e.js",
     "static/js/453.32088f1f.chunk.js": "/rockopolor/static/js/453.32088f1f.chunk.js",
     "static/media/headerBackground.png": "/rockopolor/static/media/headerBackground.d9cd9d7b93667fa305db.png",
     "static/media/screenshot3.png": "/rockopolor/static/media/screenshot3.6fd902d1f88473bec4b3.png",
@@ -13,12 +13,12 @@
     "static/media/google-play-badge.png": "/rockopolor/static/media/google-play-badge.1194e014998c301db97f.png",
     "static/media/logoHeader.svg": "/rockopolor/static/media/logoHeader.e9c14816a4cbbf7c9e5fee18960b1703.svg",
     "index.html": "/rockopolor/index.html",
-    "main.54e438d7.css.map": "/rockopolor/static/css/main.54e438d7.css.map",
-    "main.a0be2df0.js.map": "/rockopolor/static/js/main.a0be2df0.js.map",
+    "main.f9f30d34.css.map": "/rockopolor/static/css/main.f9f30d34.css.map",
+    "main.4b6afb6e.js.map": "/rockopolor/static/js/main.4b6afb6e.js.map",
     "453.32088f1f.chunk.js.map": "/rockopolor/static/js/453.32088f1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54e438d7.css",
-    "static/js/main.a0be2df0.js"
+    "static/css/main.f9f30d34.css",
+    "static/js/main.4b6afb6e.js"
   ]
 }
