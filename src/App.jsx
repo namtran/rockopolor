@@ -285,7 +285,7 @@ function App() {
                       )}
                       <h3 className="text-lg font-semibold">{title}</h3>
                     </div>
-                    <p className="text-white/90">{text}</p>
+                    <p className="text-white/90 text-left">{text}</p>
                   </motion.div>
                 </div>
               ))}
