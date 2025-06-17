@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rockopolor/static/css/main.54e438d7.css",
-    "main.js": "/rockopolor/static/js/main.1a4417f5.js",
+    "main.js": "/rockopolor/static/js/main.a0be2df0.js",
     "static/js/453.32088f1f.chunk.js": "/rockopolor/static/js/453.32088f1f.chunk.js",
     "static/media/headerBackground.png": "/rockopolor/static/media/headerBackground.d9cd9d7b93667fa305db.png",
     "static/media/screenshot3.png": "/rockopolor/static/media/screenshot3.6fd902d1f88473bec4b3.png",
@@ -14,11 +14,11 @@
     "static/media/logoHeader.svg": "/rockopolor/static/media/logoHeader.e9c14816a4cbbf7c9e5fee18960b1703.svg",
     "index.html": "/rockopolor/index.html",
     "main.54e438d7.css.map": "/rockopolor/static/css/main.54e438d7.css.map",
-    "main.1a4417f5.js.map": "/rockopolor/static/js/main.1a4417f5.js.map",
+    "main.a0be2df0.js.map": "/rockopolor/static/js/main.a0be2df0.js.map",
     "453.32088f1f.chunk.js.map": "/rockopolor/static/js/453.32088f1f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54e438d7.css",
-    "static/js/main.1a4417f5.js"
+    "static/js/main.a0be2df0.js"
   ]
 }
