@@ -40,7 +40,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[white] py-16 px-4 sm:px-6">
+    <section className="bg-[white] pt-[50px] px-4 sm:px-6">
 
       <div className="max-w-7xl mx-auto text-leftr">
 

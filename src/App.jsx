@@ -10,7 +10,7 @@ import screenshot2 from "./assets/screenshot2.png";
 import screenshot3 from "./assets/screenshot3.png";
 import screenshot4 from "./assets/screenshot4.png";
 import Testimonials from "./Testimonials";
-import headerLogo from "./assets/headerLogo.png";
+import headerLogo from "./assets/logoHeader.svg";
 import { useState } from "react";
 import heroBg from './assets/headerBackground.png';
 import HeroAppName from './assets/HeroAppName.png';
@@ -21,7 +21,7 @@ import { FaFacebookF, FaXTwitter, FaTiktok } from 'react-icons/fa6';
 import { FaBell, FaExclamationCircle } from 'react-icons/fa';
 function App() {
 
-  const screenshots = [screenshot1, screenshot2, screenshot3, screenshot4];
+  const screenshots = [screenshot1, screenshot2, screenshot3];
   const sections = ["Home", "Features", "About", "Feedback"];
   const [current, setCurrent] = useState(0);
   function HeaderNav() {
@@ -80,7 +80,7 @@ function App() {
                   style={{
                     height: '100%',
                     backgroundColor: '#ffe0b3',
-                    clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+                    clipPath: 'polygon(0 0, calc(100% - 45px) 0, 100% 100%, 0% 100%)',
                     zIndex: 1,
                   }}
                 />
@@ -91,18 +91,18 @@ function App() {
                   style={{
                     height: '100%',
                     backgroundColor: '#ffffff',
-                    clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+                    clipPath: 'polygon(0 0, calc(100% - 45px) 0, 100% 100%, 0% 100%)',
                     zIndex: 2,
                   }}
                 />
 
                 {/* Top trapezoid (orange) */}
                 <div
-                  className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[50px] w-[90px] sm:w-[390px]"
+                  className="absolute left-0 text-white text-lg font-bold flex items-center justify-end pr-[45px] w-[90px] sm:w-[390px]"
                   style={{
                     height: '100%',
                     backgroundColor: '#FFBB00',
-                    clipPath: 'polygon(0 0, calc(100% - 50px) 0, 100% 100%, 0% 100%)',
+                    clipPath: 'polygon(0 0, calc(100% - 45px) 0, 100% 100%, 0% 100%)',
                     zIndex: 3,
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '34px',
@@ -117,7 +117,7 @@ function App() {
 
                   >
                     {/* Logo image (always visible) */}
-                    <img src={headerLogo} alt="GoBusSG" className="w-5 h-5 transition-transform duration-300 hover:scale-110 hover:drop-shadow-md" />
+                    <img src={headerLogo} alt="GoBusSG" className="w-[40px] h-[38px] transition-transform duration-300 hover:scale-110 hover:drop-shadow-md" />
 
                     {/* Text (visible on sm and up) */}
                     <motion.span
@@ -206,7 +206,7 @@ function App() {
       </section>
 
       {/* Features */}
-      <section id="Features" className="py-8 bg-[white]">
+      <section id="Features" className="pt-8 bg-[white]">
         <div className="max-w-7xl mx-auto px-4 text-center pb-6">
           <div className="pb-6">
             <div className="relative inline-block text-center">
@@ -248,7 +248,7 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
                 whileHover={{ y: -6 }}
-                className={`bg-gradient-to-br from-[#44CB7D] via-[#5EE390] to-[#3CC172] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300`}
+                className="bg-gradient-to-br from-[#19AF7E] to-[#4EE09A] p-6 rounded-2xl shadow-lg text-center transition-transform duration-300 border-[1px] border-[#30B37C]"
               >
                 <div className="flex items-center justify-center gap-3 text-white mb-4">
                   {index === 2 ? (
@@ -256,10 +256,9 @@ function App() {
                       <div className="bg-[#1C9766] rounded-full p-2 flex items-center justify-center">
                         <FaTrain size={28} />
                       </div>
-
                       {/* Bell + Alert Icon */}
                       <div className="absolute -top-1 -right-1 p-1">
-                        <FaBell size={12} className="text-[white]" />
+                        <FaBell size={12} className="text-white" />
                         <FaExclamationCircle
                           size={10}
                           className="text-white absolute top-0 right-0"
@@ -277,10 +276,11 @@ function App() {
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
-      <section id="About" className="bg-[white] py-16 px-4">
+      <section id="About" className="bg-[white] pt-[50px] pb-[70px] px-4">
         <div className="max-w-7xl mx-auto relative">
 
           {/* Rounded Frame that wraps About + Screenshot container */}
@@ -378,7 +378,7 @@ function App() {
 
       <section id="Feedback" className="pt-16 pb-[120px] bg-[white] px-4">
         <div className="max-w-7xl mx-auto border-2 border-dotted border-[#A3D9A5] rounded-2xl">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 md:p-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-2 md:p-4">
             {/* Left: Image */}
             <div className="w-full md:w-1/2 flex justify-center">
               <img
@@ -390,7 +390,7 @@ function App() {
 
             {/* Right: Feedback Form */}
             <div className="w-full md:w-1/2">
-              <div className="bg-white rounded-2xl p-6 md:p-8 space-y-4 shadow-sm">
+              <div className="bg-white p-6 md:p-8 space-y-4">
                 <h3 className="text-2xl font-semibold text-[#253455] mb-4">We’d love your feedback</h3>
                 <p>Drop us a line! We are here to answer your questions.</p>
                 <form
@@ -435,38 +435,6 @@ function App() {
       {/* Footer */}
       <footer className="text-center py-6 bg-gradient-to-br from-[#44CB7D] via-[#20B486] to-[#0EA672] text-sm text-white">
         <div className="flex flex-col items-center space-y-3 sm:space-y-0 sm:flex-row sm:justify-between max-w-7xl mx-auto px-4">
-
-          {/* Social icons come first now */}
-          <div className="flex space-x-6">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="hover:text-white/80 transition"
-            >
-              <FaFacebookF size={20} />
-            </a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X"
-              className="hover:text-white/80 transition"
-            >
-              <FaXTwitter size={20} />
-            </a>
-            <a
-              href="https://tiktok.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok"
-              className="hover:text-white/80 transition"
-            >
-              <FaTiktok size={20} />
-            </a>
-          </div>
-
           {/* Footer text on the right */}
           <div className="space-y-1 text-center sm:text-right">
             <p>&copy; {new Date().getFullYear()} GoBus Singapore. All rights reserved.</p>
@@ -474,6 +442,40 @@ function App() {
               GoBus Singapore is committed to making city travel smarter, greener, and more connected.
             </p>
           </div>
+          {/* Social icons come first now */}
+          <div className="flex flex-col space-y-2">
+            <span className="text-white text-sm">Social media links</span>
+            <div className="flex space-x-10">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="hover:text-white/80 transition"
+              >
+                <FaFacebookF size={20} />
+              </a>
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="hover:text-white/80 transition"
+              >
+                <FaXTwitter size={20} />
+              </a>
+              <a
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="hover:text-white/80 transition"
+              >
+                <FaTiktok size={20} />
+              </a>
+            </div>
+          </div>
+
         </div>
       </footer>
 
